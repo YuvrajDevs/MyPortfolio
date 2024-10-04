@@ -2,7 +2,9 @@ import React from 'react';
 import localFont from "next/font/local";
 import Image from 'next/image';
 import logo from './public/Yuvraj.png';
-import pic from './public/pic.png';
+import github from './public/github.png';
+import behance from './public/behance.png';
+import linkedin from './public/linkedin.png';
 import code from './public/code.png'
 import ui from './public/ui.png'
 import analysis from './public/analysis.png'
@@ -20,8 +22,12 @@ export default function Page() {
       <header className="flex addm justify-between items-center py-4 px-4 sm:px-6 lg:px-8">
         <Image src={logo} alt="Logo" className="w-16 " />
         <div className="hidden sm:flex items-center gap-4 md:gap-8 lg:gap-16">
+          <a href="#aboutme">
           <h3 className="text-sm md:text-base">About me</h3>
+          </a>
+          <a href="#projects">
           <h3 className="text-sm md:text-base">Projects</h3>
+          </a>
           <h3 className="text-sm md:text-base">Contact</h3>
         </div>
       </header>
@@ -32,7 +38,7 @@ export default function Page() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-thin">Hey, I am</h2>
           <h1 className={`text-5xl sm:text-6xl   lg:text-7xl ${Oswald.className}`}>Yuvraj Singh Shekhawat</h1>
           <p className="mt-5 text-base  md:text-lg sm:text-lg lg:text-xl font-light max-w-full md:max-w-[60vw]">
-          a dedicated student skilled in design and development.
+          I am a dedicated student skilled in design and development.
           My passion lies in transforming imaginative ideas into
           visually engaging designs that truly connect with users.
           Through a blend of creative flair and industry best
@@ -40,7 +46,7 @@ export default function Page() {
           breathe life into your concepts. Whether I'm crafting
           designs or coding, I find joy in bringing my projects to
           life, ensuring each one tells a compelling story with
-          seamless functionality and thoughtful design
+          seamless functionality and thoughtful design.
           </p>
           <button className="py-2 flex  items-center gap-3 mt-10 px-4 sm:px-6 text-lg sm:text-xl hover:bg-white hover:text-black duration-200 font-medium border-solid border-white border-2 rounded-lg">
             Contact
@@ -73,7 +79,7 @@ export default function Page() {
           </marquee>
         </div>
 
-        <div className='addm  mt-[100px] mb-[150px] px-4 sm:px-6 lg:px-8'>
+        <div id='aboutme' className='addm  mt-[100px] mb-[150px] px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-col  gap-8 lg:gap-20'>
             <div className="w-full ">
               <h1 className={`text-6xl sm:text-7xl lg:text-7xl mb-8 ${Oswald.className}`}>About me</h1>
@@ -128,8 +134,8 @@ export default function Page() {
       </div>
 
       {/* section 3 */}
-      <div className='addm mb-5 px-4 sm:px-6 lg:px-8'>
-      <h1 className={`text-4xl sm:text-5xl lg:text-7xl mb-8 ${Oswald.className}`}>Projects</h1>
+      <div id='projects' className='addm mb-5 px-4 sm:px-6 lg:px-8'>
+      <h1 className={`text-6xl sm:text-7xl lg:text-7xl mb-8 ${Oswald.className}`}>Projects</h1>
 
 
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>
@@ -160,7 +166,49 @@ export default function Page() {
       
       </div>
 
+      {/* Contact Me section */}
+      <div id='contact' className='addm mt-20 mb-20 px-4 sm:px-6 lg:px-8'>
+        <h1 className={`text-6xl sm:text-7xl lg:text-7xl mb-8 ${Oswald.className}`}>Contact Me</h1>
+        
+        <div className='flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12'>
+          <div className='max-w-3xl'>
+            <p className='text-lg sm:text-xl font-light lg:max-w-xl xl:max-w-3xl leading-relaxed mb-8'>
+              If you have a project in mind or just want to chat, I'd love to hear from you! 
+              Whether it's web development, UI/UX design, or data analysis, I'm always excited 
+              to take on new challenges and bring ideas to life.
+            </p>
+            <div className='flex gap-2'>
+            <span className='font-bold'>Email: </span> 
+            <a href="mailto:workwithyuvraj0712@gmail.com">
+            <p>workwithyuvraj0712@gmail.com</p>
+            </a>
+            </div>
+            <div className='flex gap-2'>
+            <span className='font-bold'>Phone: </span> 
+            <p>+91-86195-10246</p>
+            </div>
+          </div>
+          
+          <div className='flex flex-wrap justify-center sm:justify-start gap-6'>
+            {[
+              { name: 'GitHub', icon: github, url: 'https://github.com/YuvrajDevs' },
+              { name: 'LinkedIn', icon: linkedin, url: 'https://www.linkedin.com/in/yuvraj-singh-shekhawat-4404b4283/' },
+              { name: 'Behance', icon: behance, url: 'https://www.behance.net/yuvrajsingh0712' }
+            ].map((platform, index) => (
+              <a 
+                key={index} 
+                href={platform.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className='w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center transition-transform hover:scale-110'
+              >
+                <Image src={platform.icon} alt={platform.name} className='w-7 h-7 sm:w-8 sm:h-8' />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }
-
