@@ -28,7 +28,9 @@ export default function Page() {
           <a href="#projects">
           <h3 className="text-sm md:text-base">Projects</h3>
           </a>
+          <a href="#contact">
           <h3 className="text-sm md:text-base">Contact</h3>
+          </a>
         </div>
       </header>
 
@@ -48,9 +50,11 @@ export default function Page() {
           life, ensuring each one tells a compelling story with
           seamless functionality and thoughtful design.
           </p>
+          <a href="#contact">
           <button className="py-2 flex  items-center gap-3 mt-10 px-4 sm:px-6 text-lg sm:text-xl hover:bg-white hover:text-black duration-200 font-medium border-solid border-white border-2 rounded-lg">
             Contact
           </button>
+          </a>
         </div>
         <div className="w-full md:w-[40vw] flex justify-center items-center">
           <div className="eyes-container flex space-x-4 sm:space-x-8">
@@ -167,7 +171,7 @@ export default function Page() {
       </div>
 
       {/* Contact Me section */}
-      <div id='contact' className='addm mt-20 mb-20 px-4 sm:px-6 lg:px-8'>
+      <div id='contact' className='addm mt-20  mb-20 px-4 sm:px-6 lg:px-8'>
         <h1 className={`text-6xl sm:text-7xl lg:text-7xl mb-8 ${Oswald.className}`}>Contact Me</h1>
         
         <div className='flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12'>
