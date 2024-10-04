@@ -2,26 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body{
+  color: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.addm{
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.eyes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye {
+  width: 20vw;
+  max-width: 120px;
+  height: 32vw;
+  max-height: 200px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  animation: blink 4s infinite;
+}
+
+.pupil {
+  width: 30%;
+  height: 30%;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: move 5s infinite alternate;
+}
+
+@media (max-width: 640px) {
+  .eye {
+    width: 25vw;
+    height: 40vw;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes blink {
+  0%, 96%, 98% {
+    transform: scaleY(1);
+  }
+  97% {
+    transform: scaleY(0.1);
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes move {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    transform: translate(-25%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -25%);
+  }
+  75% {
+    transform: translate(-75%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -75%);
   }
 }
