@@ -32,11 +32,15 @@ export default function Page() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-thin">Hey, I am</h2>
           <h1 className={`text-5xl sm:text-6xl   lg:text-7xl ${Oswald.className}`}>Yuvraj Singh Shekhawat</h1>
           <p className="mt-5 text-base  md:text-lg sm:text-lg lg:text-xl font-light max-w-full md:max-w-[60vw]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam illo
-            repudiandae dignissimos culpa excepturi porro quibusdam fuga esse ad
-            accusamus. Molestias pariatur veniam aliquid totam aliquam dicta numquam
-            soluta asperiores animi magni nam ut, accusantium reiciendis repellendus,
-            ratione maiores assumenda nulla! Nobis.
+          a dedicated student skilled in design and development.
+          My passion lies in transforming imaginative ideas into
+          visually engaging designs that truly connect with users.
+          Through a blend of creative flair and industry best
+          practices, I create intuitive and refined solutions that
+          breathe life into your concepts. Whether I'm crafting
+          designs or coding, I find joy in bringing my projects to
+          life, ensuring each one tells a compelling story with
+          seamless functionality and thoughtful design
           </p>
           <button className="py-2 flex  items-center gap-3 mt-10 px-4 sm:px-6 text-lg sm:text-xl hover:bg-white hover:text-black duration-200 font-medium border-solid border-white border-2 rounded-lg">
             Contact
@@ -69,7 +73,7 @@ export default function Page() {
           </marquee>
         </div>
 
-        <div className='addm  mt-[150px] mb-[150px] px-4 sm:px-6 lg:px-8'>
+        <div className='addm  mt-[100px] mb-[150px] px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-col  gap-8 lg:gap-20'>
             <div className="w-full ">
               <h1 className={`text-6xl sm:text-7xl lg:text-7xl mb-8 ${Oswald.className}`}>About me</h1>
@@ -83,11 +87,11 @@ export default function Page() {
             </div>
 
             {/* Right div with skills boxes */}
-            <div className='mt-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>
+            <div className='sm:mt-0 mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>
             {/* Skill box */}
             <div className='h-[150px] rounded-2xl flex items-center justify-center bg-[#252525]'>
-              <div className='flex flex-col justify-center gap-2 items-center'>
-                <Image src={code} alt="Web Development icon" />
+              <div className='flex flex-col justify-center gap-3 items-center'>
+                <Image src={code} className='h-[70px] w-[70px]' alt="Web Development icon" />
                 <h1 className="text-sm sm:text-base">Web Development</h1>
               </div>
             </div>
@@ -95,22 +99,22 @@ export default function Page() {
             {/* ... Other skill boxes ... */}
             <div className='h-[150px] rounded-2xl flex items-center justify-center bg-[#252525]'>
               <div className='flex flex-col justify-center gap-2 items-center'>
-                <Image src={code} alt="Web Development icon" />
-                <h1 className="text-sm sm:text-base">Web Development</h1>
+                <Image src={ui} className='h-[70px] w-[70px]' alt="Web Development icon" />
+                <h1 className="text-sm sm:text-base">Ui Ux Design</h1>
               </div>
             </div>
             
             <div className='h-[150px] rounded-2xl flex items-center justify-center bg-[#252525]'>
               <div className='flex flex-col justify-center gap-2 items-center'>
-                <Image src={code} alt="Web Development icon" />
-                <h1 className="text-sm sm:text-base">Web Development</h1>
+                <Image src={analysis} className='h-[70px] w-[70px]' alt="Web Development icon" />
+                <h1 className="text-sm sm:text-base">Data Analysis</h1>
               </div>
             </div>
             
             <div className='h-[150px] rounded-2xl flex items-center justify-center bg-[#252525]'>
               <div className='flex flex-col justify-center gap-2 items-center'>
-                <Image src={code} alt="Web Development icon" />
-                <h1 className="text-sm sm:text-base">Web Development</h1>
+                <Image src={ml} className='h-[70px] w-[70px]' alt="Web Development icon" />
+                <h1 className="text-sm sm:text-base">Machine Learning</h1>
               </div>
             </div>
             
